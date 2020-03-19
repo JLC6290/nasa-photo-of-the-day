@@ -1,10 +1,14 @@
-// import React, { useState } from "react";
+import React from "react";
 
 
-// const Card = props => {
-    
-
-//     return (
-
-//     )
-// }
+const Card = args => {
+    const { cardTitle, cardDesc, ...rest } = args;
+    console.log(args);
+    return (
+        <div>
+            <h2>{cardTitle}</h2>
+            <p>{cardDesc}</p>
+        </div>
+    )
+}
+export default Card;
