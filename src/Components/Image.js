@@ -1,17 +1,12 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
 
 
-const Image = props => {
-  // axios
-  //   .get()
-  //   .then(response => {
-  //     console.log(response);
-  //   })
-    console.log(props);
+const Image = args => {
+    const { imageData, ...rest } = args;
+    console.log(args);
     return (
         <div className="image">
-            <img src={props.url} alt={props.title}/>
+            <img src={imageData} alt="APOD from NASA"/>
         </div>
     )
 }
