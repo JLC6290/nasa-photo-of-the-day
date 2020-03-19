@@ -33,23 +33,22 @@ function App() {
     background-color: black;
   `;
   const ButtonWrapper = styled.div`
-    margin: 4%;
+    margin: 3%;
   `;
   const Title = styled.h1`
     color: white;
   `;
+
 
   return (
     <div className="App">
       <Background>
         <Title>Astronomy Picture of the Day! Courtesy of NASA.</Title>
         <ButtonWrapper><Button color='primary' onClick={toggle}>Illuminate the night</Button></ButtonWrapper>
-   
           <Fade in={fade}>
-            <Image imageData={apiData.url} data={apiData} />
+            <Image imageData={apiData.url} data={apiData}/>
             <Card cardTitle={apiData.title} cardDesc={apiData.explanation}/>
           </Fade>
-
       </Background>
     </div>
   );
